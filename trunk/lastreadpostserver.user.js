@@ -1,6 +1,6 @@
 // LastReadPostServer
-// version 0.7
-// 2006-12-20
+// version 0.8
+// 2007-01-04
 // Copyright (c) 2006, Matt 'kitzke' Cribbs (mcribbs@gmail.com)
 // Released under the GPL license
 // http://www.gnu.org/copyleft/gpl.html
@@ -392,5 +392,5 @@ if(menuon) {
 	document.getElementsByTagName("body")[0].appendChild(menu);
 }
 
-var version = "0.7";
-try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://osakanyc.com/files/lastreadpostserver.user.js'>LastReadPostServer Version " + version + "</a>";} catch(e) {}
+var version = "0.8";
+try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://code.google.com/p/lastreadpost/'>LastReadPost (server edition) v" + version + "</a>";} catch(e) {}
