@@ -1,4 +1,6 @@
+#summary Changes made before we moved to version control
 #labels Phase-Implementation
+
 ==ChangeLog==
 ===Greasemonkey script===
 ====0.7 (12/20/06)====
@@ -13,5 +15,4 @@
 ====0.2 (12/02/06) - changes from [http://collingrady.com/ Collin]====
   * address the length issue for the most part - setHistory now truncates it to 15 entries
   * strips out any invalid keys (for instance if you stop tracking a post in your history).
-
 
