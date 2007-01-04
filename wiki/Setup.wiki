@@ -1,0 +1,12 @@
+#summary Setup instructions
+
+= Instructions =
+
+1. Run lastreadpost.sql in your target database
+
+2. Put lrp.txt on your web server renamed to lrp.php. Edit the server, database, username, and password variable as needed
+
+3. Install the greasemonkey script from http://osakanyc.com/files/lastreadpostserver.user.js
+
+
+
