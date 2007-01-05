@@ -1,5 +1,4 @@
 --  LastReadPost (server edition)
--- lastreadpost.sql
 -- $URL$
 -- $Rev$
 -- $Author$

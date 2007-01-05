@@ -1,5 +1,4 @@
 // LastReadPost (server edition)
-// lastreadpostserver.user.js
 // $URL$
 // $Rev$
 // $Author$

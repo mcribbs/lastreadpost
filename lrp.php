@@ -1,6 +1,5 @@
 <?php
 // LastReadPost (server edition)
-// lrp.php
 // $URL$
 // $Rev$
 // $Author$
