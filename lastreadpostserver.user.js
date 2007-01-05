@@ -398,5 +398,4 @@ if(menuon) {
 	document.getElementsByTagName("body")[0].appendChild(menu);
 }
 
-var version = "0.8";
-try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://code.google.com/p/lastreadpost/'>LastReadPost (server edition) v" + version + "</a>";} catch(e) {}
+try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://code.google.com/p/lastreadpost/'>LastReadPost (server edition) $Rev:$ </a>";} catch(e) {}
