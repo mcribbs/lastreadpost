@@ -1,6 +1,11 @@
-// LastReadPostServer
-// version 0.8
-// 2007-01-04
+// LastReadPost (server edition)
+// lastreadpostserver.user.js
+// $URL$
+// $Rev$
+// $Author$
+// $Date$
+// $Id$
+//
 // Copyright (c) 2006, Matt 'kitzke' Cribbs (mcribbs@gmail.com)
 // Released under the GPL license
 // http://www.gnu.org/copyleft/gpl.html
@@ -14,6 +19,8 @@
 // 2005-06-13
 // Copyright (c) 2005, Jon Yurek
 // Released under the GPL license
+
+
 // --------------------------------------------------------------------
 //
 // This is a Greasemonkey user script.

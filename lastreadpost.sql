@@ -1,10 +1,14 @@
---  LastReadPostServer
--- version 0.2
--- 2006-04-04
+--  LastReadPost (server edition)
+-- lastreadpost.sql
+-- $URL$
+-- $Rev$
+-- $Author$
+-- $Date$
+-- $Id$
+--
 -- Copyright (c) 2006, Matt Cribbs
 -- Released under the GPL license
 -- http://www.gnu.org/copyleft/gpl.html
--- 
 
 -- --------------------------------------------------------
 
