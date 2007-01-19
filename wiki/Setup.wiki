@@ -1,5 +1,5 @@
 #summary Setup instructions
-#labels Phase-Deploy
+#labels Phase-Deploy,Featured
 
 = Instructions =
 
@@ -8,5 +8,4 @@
 2. Put [http://lastreadpost.googlecode.com/files/lrp.php lrp.php] on your web server. Edit the server, database, username, and password variable as needed.
 
 3. Install the [http://lastreadpost.googlecode.com/files/lastreadpostserver.user.js greasemonkey script], configure the area marked by "USER MODIFIABLE STUFF"
-
 
