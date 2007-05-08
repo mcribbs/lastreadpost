@@ -5,7 +5,7 @@
 // $Date$
 // $Id$
 //
-// Copyright (c) 2006, Matt 'kitzke' Cribbs (mcribbs@gmail.com)
+// Copyright (c) 2007, Matt 'kitzke' Cribbs (mcribbs@gmail.com)
 // Released under the GPL license
 // http://www.gnu.org/copyleft/gpl.html
 // 
@@ -18,7 +18,6 @@
 // 2005-06-13
 // Copyright (c) 2005, Jon Yurek
 // Released under the GPL license
-
 
 // --------------------------------------------------------------------
 //
@@ -84,7 +83,7 @@ var menustyle = {
 	paddingLeft : "7px",
 	paddingBottom : "7px"
 };
-
+var hideread = false;
 //
 // END USER MODIFIABLE STUFF
 //
@@ -117,6 +116,29 @@ function savePostValues(key,r,p,c,t) {
 		url: scriptURL + '?action=set&key=' + key + '&r=' + r + optionalParams,
 	});
 }
+
+// Copied from http://episteme.arstechnica.com/groupee_common/jscript/eve_constructor.js
+function showElement(){ //usage showElement('id1','id2','id3','id4','etc')
+ var element;
+ for (var i=0; i<=showElement.arguments.length; i++) {
+    element = document.getElementById(showElement.arguments[i]);
+      if(element){
+         element.style.display='';
+         // edl: 'block' value causes a "space leak" problem in Firefox
+         //element.style.display='block';
+      }
+ }
+}// end fn
+
+// Copied from http://episteme.arstechnica.com/groupee_common/jscript/eve_constructor.js
+function hideElement(){  //usage hideElement('id1','id2','id3','id4','etc')
+ var element;
+ for (var i=0; i<=hideElement.arguments.length; i++) {
+    element = document.getElementById(hideElement.arguments[i]);
+      if(element == null) { continue };
+    element.style.display='none';
+ }
+}// end fn
 
 var threadnumbers = new Array();
 var threadlinks = new Array();
@@ -256,6 +278,23 @@ else if(isTopic) {
 			if(parseInt(savedpage) <= parseInt(currentpage))
 			{	
 				savePostValues(lpf + ":" + lpm,lpr,currentpage,posts.length + (40 * (currentpage-1)) - 1,titleString);
+			}
+			
+			// Hide read posts if we are on the last page of the thread (if viewing previous pages we probably are looking for something so don't hide)
+			// Do not hide if savedpage is 0, b/c we haven't read anything yet.
+			if(hideread && parseInt(savedpage) <= parseInt(currentpage) && parseInt(savedpage) != 0) {
+				var last_r = values[1];
+				for(var i=0;i<posts.length;i++) {
+					var cur_r = posts[i].getAttribute("href").match(/(\/r\/)|(\?r=)(\d+)/)[3];	
+					if(cur_r == last_r) {
+						break; // quit hiding posts when we hit the last read one
+					}
+					if(cur_r != lpm)
+					{
+						showElement('ignore_'+cur_r); 
+						hideElement('post_'+cur_r);
+					}
+				}
 			}
 		}
 	});
@@ -398,4 +437,4 @@ if(menuon) {
 	document.getElementsByTagName("body")[0].appendChild(menu);
 }
 
-try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://code.google.com/p/lastreadpost/'>LastReadPost (server edition) $Rev:$ </a>";} catch(e) {}
+try { document.getElementById("ev_copy_txt").innerHTML += "<br><br><a href='http://code.google.com/p/lastreadpost/'>LastReadPost (server edition) $Rev$ </a>";} catch(e) {}
