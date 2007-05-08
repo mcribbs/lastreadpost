@@ -280,9 +280,9 @@ else if(isTopic) {
 				savePostValues(lpf + ":" + lpm,lpr,currentpage,posts.length + (40 * (currentpage-1)) - 1,titleString);
 			}
 			
-			// Hide read posts if we are on the last page of the thread (if viewing previous pages we probably are looking for something so don't hide)
+			// Hide read posts if we are on the page of the thread where the last read post is (if viewing previous pages we probably are looking for something so don't hide)
 			// Do not hide if savedpage is 0, b/c we haven't read anything yet.
-			if(hideread && parseInt(savedpage) <= parseInt(currentpage) && parseInt(savedpage) != 0) {
+			if(hideread && parseInt(savedpage) == parseInt(currentpage) && parseInt(savedpage) != 0) {
 				var last_r = values[1];
 				for(var i=0;i<posts.length;i++) {
 					var cur_r = posts[i].getAttribute("href").match(/(\/r\/)|(\?r=)(\d+)/)[3];	
