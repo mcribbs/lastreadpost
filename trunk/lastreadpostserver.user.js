@@ -296,6 +296,7 @@ else if(isTopic) {
 					}
 				}
 			}
+			window.location.hash="post_" + values[1];  // Repostion on the anchor as hiding read, or posts with images will throw it off.
 		}
 	});
 }
