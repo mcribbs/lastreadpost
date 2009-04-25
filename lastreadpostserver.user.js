@@ -261,7 +261,7 @@ else if(isTopic) {
 	var lpm = lastposthref.match(/\/m\/(\d+)/)[1];
 	var lpr = lastposthref.match(/(\/r\/)|(\?r=)(\d+)/)[3];
 
-	var currentpage = document.getElementById("ev_powered_by").parentNode.nextSibling.getElementsByTagName("b");
+	var currentpage = document.getElementsByClassName("ev_poweredby")[0].parentNode.getElementsByTagName("b"); 
 	if(currentpage.length > 0) currentpage = currentpage[0].innerHTML;
 	else currentpage = 1;
 
